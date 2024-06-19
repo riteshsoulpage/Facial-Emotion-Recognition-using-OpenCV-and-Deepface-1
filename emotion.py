@@ -30,6 +30,8 @@ while True:
 
         # Determine the dominant emotion
         emotion = result[0]['dominant_emotion']
+        # print("The emotion is - ",emotion)
+        print("Result is - ",result)
 
         # Draw rectangle around face and label with predicted emotion
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
