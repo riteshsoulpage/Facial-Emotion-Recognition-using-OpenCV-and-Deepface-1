@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Facemo
+name: Build and deploy Python app to Azure Web App - facemo
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EA55FF179CEE4951973E96013091504B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_080D82353D514B288D136C0C3E00DA78 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_76E83C2F9AFA4ED0880209F4B667812E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_56F43BA196384A7099DBAB953885B921 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C499C671EB5D4FD6A989E974836C3F66 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E172FD39C75840B29A9981645897B5DE }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Facemo'
+          app-name: 'facemo'
           slot-name: 'Production'
           
