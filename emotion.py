@@ -11,13 +11,13 @@ while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
 
-    # Convert frame to grayscale
+    # # Convert frame to grayscale
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # Convert grayscale frame to RGB format
+    # # Convert grayscale frame to RGB format
     rgb_frame = cv2.cvtColor(gray_frame, cv2.COLOR_GRAY2RGB)
 
-    # Detect faces in the frame
+    # # Detect faces in the frame
     faces = face_cascade.detectMultiScale(gray_frame, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
     for (x, y, w, h) in faces:
